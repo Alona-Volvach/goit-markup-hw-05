@@ -527,16 +527,16 @@ img {
   margin-bottom: 16px;
 }
 .form-field-wrapper {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 .label-field {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .field-wrapper {
   position: relative;
@@ -583,6 +583,7 @@ img {
   border: none;
   margin-right: auto;
   margin-left: auto;
+  cursor: pointer;
 }
 .textarea-comment {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -593,7 +594,44 @@ img {
   resize: none;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  outline: none;
+}
+.textarea-comment:focus {
+  border: 1px solid #4d5ae5;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.field-wrapper-checkbox {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  height: 16px;
+}
+.label-policy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-left: 8px;
+}
+.accent {
+  line-height: 1.3;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+}
+.custom-checkbox:checked {
+  fill: #404bbf;
+  border: 1px solid #404bbf;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
