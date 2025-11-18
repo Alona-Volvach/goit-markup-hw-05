@@ -565,26 +565,6 @@ img {
   fill: #4d5ae5;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.field-send {
-  border-radius: 4px;
-  padding-block: 16px;
-  padding-inline: 32px;
-  width: 169px;
-  height: 56px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: #4d5ae5;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-align: center;
-  color: #fff;
-  display: block;
-  border: none;
-  margin-right: auto;
-  margin-left: auto;
-  cursor: pointer;
-}
 .textarea-comment {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -607,13 +587,11 @@ img {
 .field-wrapper-checkbox {
   margin-top: 16px;
   margin-bottom: 24px;
-  height: 16px;
 }
 .label-policy {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
-  letter-spacing: 0.04em;
   color: #8e8f99;
   margin-left: 8px;
 }
@@ -624,14 +602,45 @@ img {
   color: #4d5ae5;
 }
 .custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 8px;
   width: 16px;
   height: 16px;
   border-radius: 2px;
+  fill: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.custom-checkbox:checked {
-  fill: #404bbf;
-  border: 1px solid #404bbf;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.polisy-chekbox:checked + .label-policy > .custom-checkbox {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+}
+.field-send {
+  border-radius: 4px;
+  padding-block: 16px;
+  padding-inline: 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  display: block;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.field-send:hover,
+.field-send:focus {
+  background-color: #404bbf;
 }
