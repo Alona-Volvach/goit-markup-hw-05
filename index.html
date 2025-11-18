@@ -58,7 +58,9 @@
             Effective Solutions <br />
             for Your Business
           </h1>
-          <button class="button-hero" type="button">Order Service</button>
+          <button class="button-hero" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="section section-main-advantages">
@@ -548,12 +550,30 @@
             </li>
           </ul>
         </div>
+        <div class="footer-container-form">
+          <p class="footer-form-text">Subscribe</p>
+          <form class="footer-form">
+            <label class="footer-label" for="useremail">
+              <input
+                class="form-email"
+                type="email"
+                name="useremail"
+                placeholder="Email"
+              />
+            </label>
+            <button class="button-footer" type="button">
+              Subscribe<svg class="subscribe-icon" width="24" height="20">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop is-open" data-modal>
       <div class="modal">
         <p class="form-text">Leave your contacts and we will call you back</p>
-        <button class="close-popup" type="button">
+        <button class="close-popup" type="button" data-modal-close>
           <svg class="close-popap-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
@@ -629,5 +649,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
