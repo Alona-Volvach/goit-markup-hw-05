@@ -544,7 +544,7 @@ img {
 .modal {
   position: absolute;
   overflow: auto;
-  padding: 24px;
+  padding: 72px 24px 24px;
   box-sizing: border-box;
   top: 50%;
   left: 50%;
@@ -562,25 +562,29 @@ img {
   position: absolute;
   top: 24px;
   right: 24px;
-  border-radius: 100%;
-  background-color: #e7e9fc;
   width: 24px;
   height: 24px;
-  border: none;
-  fill: #2e2f42;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-popup:hover,
-.close-popup:focus {
-  background-color: #404bbf;
+.close-popup:hover .close-popup-icon,
+.close-popup:focus .close-popup-icon {
   fill: #fff;
-  outline: none;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #404bbf;
+  border: none;
 }
-.close-popap-icon {
+.close-popup-icon {
   display: block;
   margin: 0 auto;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-text {
   font-weight: 500;
@@ -589,7 +593,6 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 48px;
   margin-bottom: 16px;
 }
 .form-field-wrapper {
@@ -640,7 +643,7 @@ img {
   resize: none;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   outline: none;
@@ -681,7 +684,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.polisy-chekbox:checked + .label-policy > .custom-checkbox {
+.policy-checkbox:checked + .label-policy > .custom-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
 }
@@ -689,7 +692,7 @@ img {
   border-radius: 4px;
   padding-block: 16px;
   padding-inline: 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
