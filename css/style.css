@@ -455,7 +455,7 @@ img {
 }
 .footer-container-form {
   max-width: 453px;
-  margin-left: 80px;
+  margin-left: auto;
 }
 .footer-form-text {
   font-weight: 500;
@@ -475,6 +475,7 @@ img {
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-email::placeholder {
   font-weight: 400;
@@ -489,8 +490,15 @@ img {
 .form-email:hover,
 .form-email:focus {
   border-color: #31d0aa;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
   border-radius: 4px;
   padding-inline: 24px;
   max-width: 165px;
@@ -502,9 +510,15 @@ img {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe-icon {
   fill: #fff;
+}
+.button-footer:hover,
+.button-footer:focus {
+  background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop {
   position: fixed;
